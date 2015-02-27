@@ -6,6 +6,8 @@ SQLAlchemy==0.9.8
 Werkzeug==0.10.1
 argparse==1.2.1
 click==3.3
+gevent==1.0.1
+greenlet==0.4.5
 itsdangerous==0.24
 psycopg2==2.6
 redis==2.10.3
