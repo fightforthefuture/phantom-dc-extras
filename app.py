@@ -16,7 +16,7 @@ app.config.update(
     DEBUG=True if os.environ.get('DEBUG') else False,
     SECRET_KEY=os.environ.get('SECRET_KEY'),
     SQLALCHEMY_POOL_RECYCLE = 60 * 60,
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI').strip()
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL').strip()
 )
 db.init_app(app)
 

@@ -4,7 +4,7 @@ from models.send_record import SendRecord
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine(os.environ.get('DATABASE_URI').strip())
+engine = create_engine(os.environ.get('DATABASE_URL').strip())
 Session = sessionmaker(bind=engine)
 session = Session()
 
