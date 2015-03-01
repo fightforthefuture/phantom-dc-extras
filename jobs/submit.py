@@ -120,7 +120,7 @@ def main_data_task(data):
 
     r = requests.get(smartystreets_url, params=query)
 
-    out(u'Smarty response: %s', r.text)
+    out(u'Smarty response: %s' % r.text)
 
     smarty = json.loads(r.text)
 
