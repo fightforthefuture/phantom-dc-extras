@@ -260,6 +260,8 @@ def main_data_task(data):
         headers = {'content-type': 'application/json'}
         r4 = requests.post(url, data=data, headers=headers)
 
+        out('Got response: %s' % r4.text);
+
         form_result = json.loads(r4.text)
 
         if not form_result:
