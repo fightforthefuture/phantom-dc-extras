@@ -309,7 +309,7 @@ def fill_basic_field(val, action):
     # If there's not a pre-defined list of drop-down options, then this is easy.
     if action['options_hash'] == None:
 
-        out("    Filling in %s: %s" % (action['value'], val))
+        out(u"    Filling in %s: %s" % (action['value'], val))
 
         val = val if action['maxlength'] == None else val[:action['maxlength']]
         return val
@@ -318,7 +318,7 @@ def fill_basic_field(val, action):
     else:
         # JL HACK ~ 
         if action['options_hash'] == 'US_STATES_AND_TERRITORIES':
-            out("    Filling in %s: %s (~ JL HACK ~)" % (action['value'], val))
+            out(u"    Filling in %s: %s (~ JL HACK ~)" % (action['value'], val))
             return val
 
         # Make sure our value is a list, if it isn't. For later consistency.
@@ -328,7 +328,7 @@ def fill_basic_field(val, action):
         imperfect_match = None
         first = None
 
-        out("    Trying to find a match for list %s" % action['value'])
+        out(u"    Trying to find a match for list %s" % action['value'])
 
         for key in action['options_hash']:
             list_key = key.strip().lower()
@@ -336,17 +336,17 @@ def fill_basic_field(val, action):
                 user_key = check_val.strip().lower()
 
                 if user_key == list_key:
-                    out("        PERFECT MATCH: %s == %s" % (key, check_val))
+                    out(u"        PERFECT MATCH: %s == %s" % (key, check_val))
 
                     if isinstance(action['options_hash'], list):
-                        out("        list val: %s" % key)
+                        out(u"        list val: %s" % key)
                         return key
                     elif isinstance(action['options_hash'], dict):
-                        out("        dict val: %s" %action['options_hash'][key])
+                        out(u"        dict val: %s" %action['options_hash'][key])
                         return action['options_hash'][key]
 
                 if user_key in list_key and not imperfect_match:
-                    out("        IMPERFECT MATCH: %s in %s" % (key, check_val))
+                    out(u"        IMPERFECT MATCH: %s in %s" % (key, check_val))
 
                     if isinstance(action['options_hash'], list):
                         imperfect_match = key;
@@ -360,10 +360,10 @@ def fill_basic_field(val, action):
                         first = action['options_hash'][key]
 
         if imperfect_match:
-            out("            returning imperfect_match: %s" % imperfect_match)
+            out(u"            returning imperfect_match: %s" % imperfect_match)
             return imperfect_match
 
-        out("        No good values found for %s. FIRST!" % action['value'])
+        out(u"        No good values found for %s. FIRST!" % action['value'])
         return first
 
 def out(string):
