@@ -109,7 +109,7 @@ def main_data_task(data):
     prefix = gender_looker_upper.getPrefix(first_name)
 
     # look up detailed address info from SmartyStreets
-    out('Querying SmartyStreets for %s, %s' % (address1, zip))
+    out(u'Querying SmartyStreets for %s, %s' % (address1, zip))
     smartystreets_url = 'https://api.smartystreets.com/street-address'
     query = {
         'street': address1,
@@ -184,9 +184,9 @@ def main_data_task(data):
         recipients[result['bioguide_id']] = result
 
         if 'nickname' in result and result['nickname']:
-            name = result['nickname']+' '+result['last_name']
+            name = result['nickname']+u' '+result['last_name']
         else:
-            name = result['first_name']+' '+result['last_name']
+            name = result['first_name']+u' '+result['last_name']
 
         recipients[result['bioguide_id']]['name'] = name
 
@@ -200,7 +200,7 @@ def main_data_task(data):
     forms = json.loads(r3.text)
 
     if not forms:
-        out('congress-forms FAIL. %s' % r3.text)
+        out(u'congress-forms FAIL. %s' % r3.text)
         return log('congresss_forms_read_fail', r3.text, data)
 
     # fill out and submit the forms lol
@@ -208,7 +208,7 @@ def main_data_task(data):
         form = forms[bioguide]
         fields = {}
 
-        out("FILLING IN FORM %s" % bioguide)
+        out(u"FILLING IN FORM %s" % bioguide)
 
         for action in form['required_actions']:
             val = action['value']
@@ -220,7 +220,7 @@ def main_data_task(data):
             elif val == '$NAME_LAST':
                 fields[val] = fill_basic_field(last_name, action)
             elif val == '$NAME_FULL':
-                fields[val] = fill_basic_field(first_name+' '+last_name,action)
+                fields[val] = fill_basic_field(first_name+u' '+last_name,action)
             elif val == '$ADDRESS_STREET':
                 fields[val] = fill_basic_field(address1, action)
             elif val == '$ADDRESS_CITY':
