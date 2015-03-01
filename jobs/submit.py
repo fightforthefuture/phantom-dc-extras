@@ -370,7 +370,7 @@ def fill_basic_field(val, action):
         return first
 
 def out(string):
-    print string
+    print string.encode('utf-8', 'ignore')
 
 def log(log_type, log, input_data, uid=None, bioguide_id=None, chamber=None, \
         recipient_name=None):
