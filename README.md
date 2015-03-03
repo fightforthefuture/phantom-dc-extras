@@ -83,7 +83,7 @@ worker process picks it up and tries to submit to Congress.
 
 - `address1`: The street address (eg. "123 Main St.")
 - `zip`: Five digit zip code (eg. "55419")
-- `name` **_OR_** `first_name`/`last_name`: The user's name either as one string
+- `name` **_OR_** `first_name` and `last_name`: The user's name either as one string
   (we'll pull them apart on the first space) or two separate parameters for
   first/last.
 - `message`: The message to send to Congress (eg. "Stop bombing ppl kthx")
