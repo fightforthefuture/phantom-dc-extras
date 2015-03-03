@@ -108,14 +108,14 @@ worker process picks it up and tries to submit to Congress.
 **Response format:**
 
 If your submission was successful, you'll get a JSON object containing
-`{'queued': { ... }}` back (where the elipsis is your data being echoed back at
+`{"queued": { ... }}` back (where the elipsis is your data being echoed back at
 you.
 
 If a validation error occured, you'll get a JSON error object similar to this:
 
     {
-        'code': 1,
-        'error': 'address1 and zip fields required.'
+        "code": 1,
+        "error": "address1 and zip fields required."
     }
 
 
