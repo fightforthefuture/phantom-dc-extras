@@ -5,7 +5,7 @@ Background
 ----------
 EFF's [phantom-of-the-capitol][1] project is super gnar. But we wondered: can we
 make it even _more_ gnar? And if so, how gnar would that be? The answer, as it
-turns out, is totally rad-gnar. And that's how phantom-dc-extras came about.
+turns out, is **totally rad-gnar.** And that's how phantom-dc-extras came about.
 
 phantom-dc-extras automates the process of filling out Congress forms when you
 might not have all the data available. Maybe you collected a petition signature
