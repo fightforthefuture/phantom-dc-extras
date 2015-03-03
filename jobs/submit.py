@@ -195,7 +195,7 @@ def main_data_task(data):
 
     # Get the form fields for these congresspeople from congress-forms server
     out('Querying congress-forms server for %s' % json.dumps(bioguides))
-    url = os.environ.get('CONGRESS_FORMS_URL').strip()+'/retrieve-form-elements'
+    url = os.environ.get('PHANTOM_DC_URL').strip()+'/retrieve-form-elements'
     data = json.dumps({'bio_ids': bioguides})
     headers = {'content-type': 'application/json'}
     r3 = requests.post(url, data=data, headers=headers)
@@ -258,7 +258,7 @@ def main_data_task(data):
         fields['$CAMPAIGN_UUID'] = tag
 
         out('SENDING congress-forms SUBMISSION TO %s' % bioguide)
-        url = os.environ.get('CONGRESS_FORMS_URL').strip()+'/fill-out-form'
+        url = os.environ.get('PHANTOM_DC_URL').strip()+'/fill-out-form'
         data = json.dumps({'bio_id': bioguide, 'fields': fields})
         headers = {'content-type': 'application/json'}
         r4 = requests.post(url, data=data, headers=headers)

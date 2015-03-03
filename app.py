@@ -147,7 +147,7 @@ def get_form(bioguide):
     import json
     import requests
 
-    url = os.environ.get('CONGRESS_FORMS_URL').strip()+'/retrieve-form-elements'
+    url = os.environ.get('PHANTOM_DC_URL').strip()+'/retrieve-form-elements'
     data = json.dumps({'bio_ids': [bioguide]})
     headers = {'content-type': 'application/json'}
 
