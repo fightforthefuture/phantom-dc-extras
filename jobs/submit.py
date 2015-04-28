@@ -97,6 +97,7 @@ def main_data_task(data):
     phone      = data.get('phone') if data.get('phone') else default_phone
     tag        = data.get('tag')
     uid        = data.get('uid', None)
+    skip_senate= True if str(data.get('skip_senate')) == "1" else False
 
     # if name supplied in one field, massage it into two parts (first / last)
     if data.get('name'):
@@ -210,6 +211,10 @@ def main_data_task(data):
     for bioguide in forms:
         form = forms[bioguide]
         fields = {}
+
+        if skip_senate and recipients[bioguide]['chamber'] == 'senate':
+            out(u"SKIPPING SENATOR %s" % bioguide)
+            continue
 
         out(u"FILLING IN FORM %s" % bioguide)
 

@@ -105,6 +105,10 @@ worker process picks it up and tries to submit to Congress.
   have "telecommunications" or "technology" topics, but has an "Internet policy"
   topic, we'll match that one.
 
+**Optional parameters:**
+
+- `skip_senate`: (TinyInt 0|1) If specified, will skip sending to the senate.
+
 **Response format:**
 
 If your submission was successful, you'll get a JSON object containing

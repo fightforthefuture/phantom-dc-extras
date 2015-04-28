@@ -204,7 +204,8 @@ def submit():
             'message':      v('message', None),
             'tag':          v('tag', None),
             'topics':       v('topics', None),
-            'uid':          v('uid', None)
+            'uid':          v('uid', None),
+            'skip_senate':  v('skip_senate', 0)
         }
         from jobs.submit import main_data_task
 
