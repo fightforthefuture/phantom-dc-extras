@@ -87,7 +87,7 @@ worker process picks it up and tries to submit to Congress.
 - `name` **_OR_** `first_name` and `last_name`: The user's name either as one string
   (we'll pull them apart on the first space) or two separate parameters for
   first/last.
-- `message`: The message to send to Congress (eg. "stop spending money kthx")
+- `message`: The message to send to Congress (eg. "stop wasting money kthx")
 
 **Recommended parameters:**
 
