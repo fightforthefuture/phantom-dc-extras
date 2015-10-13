@@ -72,9 +72,9 @@ to town.
 
 API
 ---
-### `POST /submit`
+### `POST /congress/submit`
 
-The `/submit` endpoint sends form submissions into the queue for processing and
+The `/congress/submit` endpoint sends form submissions into the queue for processing and
 sending to Congress. It does only basic validation on the fields you pass in.
 The ultimate success or failure of the job is logged in the database when the
 worker process picks it up and tries to submit to Congress. 
