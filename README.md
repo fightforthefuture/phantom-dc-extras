@@ -81,6 +81,7 @@ worker process picks it up and tries to submit to Congress.
 
 **Required parameters:**
 
+- `api_key`: Your API key for access
 - `address1`: The street address (eg. "123 Main St.")
 - `zip`: Five digit zip code (eg. "55419")
 - `name` **_OR_** `first_name` and `last_name`: The user's name either as one string
@@ -108,6 +109,7 @@ worker process picks it up and tries to submit to Congress.
 **Optional parameters:**
 
 - `skip_senate`: (TinyInt 0|1) If specified, will skip sending to the senate.
+- `skip_house`: (TinyInt 0|1) If specified, will skip sending to the senate.
 
 **Response format:**
 
