@@ -109,7 +109,7 @@ worker process picks it up and tries to submit to Congress.
 **Optional parameters:**
 
 - `skip_senate`: (TinyInt 0|1) If specified, will skip sending to the senate.
-- `skip_house`: (TinyInt 0|1) If specified, will skip sending to the senate.
+- `skip_house`: (TinyInt 0|1) If specified, will skip sending to the house.
 
 **Response format:**
 
