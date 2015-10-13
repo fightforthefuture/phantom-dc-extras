@@ -94,9 +94,9 @@ worker process picks it up and tries to submit to Congress.
 - `email`: The user's email address.
 - `subject`: The subject of the message
 - `phone`: User's phone number
-- `tag`: For internal use. A campaign tag used to track stats for the send (eg.
+- `tag`: For your internal use. A campaign tag used to track stats for the send (eg.
   "stop-bombing-ppl").
-- `uid`: For internal use. The user ID of the user you're submitting the form on
+- `uid`: For your internal use. The user ID of the user you're submitting the form on
   behalf of. Can be useful for a developer who is trying to track down where
   something broke.
 - `topics`: a comma separated list of "topics", in order of preference (eg.
